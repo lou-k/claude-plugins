@@ -1,0 +1,10 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "A placeholder plugin that greets the user — useful as a starting template.",
+  "author": "lou-k",
+  "repository": "https://github.com/lou-k/calude-plugins",
+  "license": "MIT",
+  "keywords": ["hello", "placeholder", "template"],
+  "commands": ["./commands/hello.md"]
+}
