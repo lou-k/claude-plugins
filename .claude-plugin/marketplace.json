@@ -1,0 +1,19 @@
+{
+  "name": "lou-k",
+  "owner": {
+    "name": "Lou Kratz"
+  },
+  "metadata": {
+    "description": "Lou Kratz's plugin marketplace for Claude Code",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "brag-doc",
+      "source": "./brag-doc",
+      "description": "Creates a Brag Doc: a detailed account of a project, accomplishment, or experience that highlights the individual's contributions, impact, and learnings. The Brag Doc serves as a comprehensive record for performance reviews, resume building, and career development.",
+      "version": "0.1.0",
+      "strict": true
+    }
+  ]
+}

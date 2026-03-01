@@ -1,0 +1,119 @@
+version: 1
+
+output:
+  format: markdown
+  front_matter:
+    type: yaml
+    delimiter: "---"
+  encoding: utf-8
+
+project_record_schema:
+  front_matter_fields:
+    - key: id
+      required: true
+      description: "Stable identifier (slug or UUID)."
+
+    - key: name
+      required: true
+
+    - key: date_start
+      required: true
+
+    - key: date_end
+      required: false
+
+    - key: org
+      required: true
+
+    - key: role
+      required: true
+
+    - key: domain
+      required: false
+
+    - key: keywords
+      type: list
+      required: false
+
+    - key: status
+      enum: [in-progress, complete]
+      required: true
+      description: "in-progress = one or more required fields/sections still blank; complete = all required fields and sections populated."
+
+  body_sections:
+    - heading: "One-line Summary"
+      key: summary
+      required: true
+      description: "1–2 sentences: what you built + why it mattered (include best metric if available)."
+
+    - heading: "Problem, Context, & Constraints"
+      key: context
+      required: true
+      description: "Problem, why now, background, baseline, and success criteria. Constraints are latency, cost, compliance, timeline, stagffing, etc."
+
+    - heading: "Contributions"
+      key: contributions
+      required: true
+      subsections:
+        - heading: "Owned"
+          key: owned
+          type: list
+        - heading: "Led"
+          key: led
+          type: list
+        - heading: "Contributed"
+          key: contributed
+          type: list
+
+    - heading: "Key Decisions & Tradeoffs"
+      key: decisions
+      type: list
+      required: true
+      description: "Alternatives considered, tradeoffs, risks, mitigations, and rationale."
+
+    - heading: "Scope and Complexity"
+      key: scope
+      required: true
+      description: "Scale indicators: users/traffic/data volume, systems touched, team size, integrations, SLOs."
+
+    - heading: "Outcomes"
+      key: outcomes
+      required: true
+      subsections:
+        - heading: "Business"
+          key: business
+          type: list
+        - heading: "Engineering"
+          key: engineering
+          type: list
+        - heading: "ML / Model"
+          key: ml
+          type: list
+          description: "Offline/online metrics, evaluation approach, monitoring/guardrails, drift, etc."
+        - heading: "Adoption / Scale"
+          key: adoption
+          type: list
+          description: "Usage, rollout footprint, teams onboarded, reliability in production."
+
+    - heading: "Artifacts / Evidence"
+      key: artifacts
+      type: list
+      required: false
+      description: "Evidence supporting claims. Prefer metrics sources."
+      item_schema:
+        - key: label
+          required: true
+        - key: url
+          required: false
+        - key: notes
+          required: false
+
+    - heading: "Influence Beyond Code"
+      key: influence
+      required: false
+      description: "Mentoring, hiring, standards, cross-team alignment, incident leadership."
+
+    - heading: "Failures / Lessons Learned"
+      key: lessons
+      type: list
+      required: false
