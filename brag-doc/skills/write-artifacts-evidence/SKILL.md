@@ -28,7 +28,7 @@ A list of evidence supporting claims elsewhere in the entry. Each item has:
 
 ## Style
 
-Bullet list, ≤10 items. Use the item schema: `label`, `url`, `notes`.
+Bullet list, ≤10 items.
 
 ## Output
 
@@ -37,5 +37,11 @@ Return only:
 ```markdown
 ## Artifacts / Evidence
 
-- **label:** <name> | **url:** <link> | **notes:** <context>
+* **[label](url)** - notes
+```
+
+If an artifact has no url, omit the link:
+
+```markdown
+* **label** - notes
 ```
