@@ -23,4 +23,8 @@ Every entry follows a structured [spec](skills/write/spec.yaml) covering: one-li
 
 ## Output
 
-A markdown file with YAML front matter per the spec — one file per project, ready to drop into a brag doc collection.
+A markdown file with YAML front matter per the spec — one file per project, ready to drop into a brag doc collection. See an [example here](example_output.md).
+
+## Installing
+
+See the [root README.md](../README.md).
