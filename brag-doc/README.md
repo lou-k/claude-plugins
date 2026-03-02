@@ -1,4 +1,4 @@
-# brag-doc
+# Brag Doc
 
 An agent that helps engineers write  brag docs — concise, evidence-rich records of what you built, why it mattered, and what you personally contributed.
 
